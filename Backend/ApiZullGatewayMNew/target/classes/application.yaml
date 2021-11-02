@@ -1,0 +1,22 @@
+server:
+   port: 8100
+      
+spring:
+  application:
+    name: ZuulGateway
+    
+zuul:
+   routes:
+      CART-APP:
+         serviceId: CARTTTT
+      PRODUCT-APP:
+         serviceId: product
+      Login-APP:
+         serviceId: Loginservice
+      Order-APP:
+         serviceId: Orderservice
+         
+#      login-service:
+#         url: http://localhost:9004
+    #  CROPMICROSERVICE:
+    #     serviceId: CROPMICROSERVICE #/
